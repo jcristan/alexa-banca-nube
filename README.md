@@ -14,7 +14,7 @@ El Skill de Banca Nube permite pedirle a Alexa que interactue con canal virtual 
 
 El demo adicionalmente esta compuesto de una interfaz web, que permite validar los valores y cambios de tus transacciones en tiempo real, para validar cada una de las operaciones realizadas. Cómo se puede ver en el siguiente diseño de arquitectura.
 
-## Arquitectura de la demo
+### Arquitectura de la demo
 
 ![Arquitectura Banca Nube](https://alexa-bank-web-demo.s3.amazonaws.com/img/Alexa+Banca+Nube.png)
 
@@ -22,17 +22,17 @@ Comandos de Voz
 
 Cada una de las funciones tiene un modelo de interacción el cual permite interactuar con Alexa
 
-## Inicio del Skill
+### Inicio del Skill
 Para activar o iniciar el Skill de Alexa, es necesario decir: “Alexa, abre Banca Nube”
 
-Si quieres saber sobre Cuenta de ahorros, pregunta: 
+**Si quieres saber sobre Cuenta de ahorros, pregunta: **
 
   “Alexa, ...:
   * dame el  saldo de mi cuenta de ahorros”
   * cual es el  balance de mi cuenta”
   * cuanto  tengo en mi cuenta de ahorros”
 
-Si quieres hablar de Tarjeta de crédito, pregunta: 
+**Si quieres hablar de Tarjeta de crédito, pregunta: **
 
   “Alexa, ...:
   * quiero  pagar tarjeta de crédito”
@@ -40,7 +40,7 @@ Si quieres hablar de Tarjeta de crédito, pregunta:
   * cual es mi  deuda en mi tarjeta de crédito”
   * qué saldo  tengo disponible en mi tarjeta de crédito”
 
-Cuando quieras conocer de Avances, pregunta: 
+**Cuando quieras conocer de Avances, pregunta: **
 
   “Alexa,...:
   * necesito  un avance de crédito”
