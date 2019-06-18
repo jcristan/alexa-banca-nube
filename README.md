@@ -1,4 +1,4 @@
-# alexa-banca-nube
+# Alexa - Banca Nube
 
 ## DESCRIPCIÓN GENERAL DEL DEMO
 
@@ -16,7 +16,7 @@ El demo adicionalmente esta compuesto de una interfaz web, que permite validar l
 
 ## Arquitectura de la demo
 
-[Image: image.png]
+![Arquitectura Banca Nube](https://alexa-bank-web-demo.s3.amazonaws.com/img/Alexa+Banca+Nube.png)
 
 Comandos de Voz
 
