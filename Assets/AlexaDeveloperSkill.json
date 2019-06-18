@@ -1,0 +1,466 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "banca nube",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "balanceCuentaAhorros",
+                    "slots": [
+                        {
+                            "name": "pin",
+                            "type": "AMAZON.FOUR_DIGIT_NUMBER",
+                            "samples": [
+                                "el código es {pin}",
+                                "mi pin es {pin}",
+                                "{pin}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "saldo en cuenta de ahorros",
+                        "el balance de mi cuenta",
+                        "el balance de mi cuenta de ahorros",
+                        "por la cuenta de ahorros",
+                        "por mi cuenta de Ahorros",
+                        "mi cuenta Ahorros",
+                        "saldo de mi cuenta corriente",
+                        "por el saldo de mi cuenta corriente",
+                        "cuanto tengo en mi cuenta corriente",
+                        "Cual es el saldo de mi cuenta corriente"
+                    ]
+                },
+                {
+                    "name": "gastosAmazon",
+                    "slots": [
+                        {
+                            "name": "pin",
+                            "type": "AMAZON.FOUR_DIGIT_NUMBER",
+                            "samples": [
+                                "mi pin es {pin}",
+                                "el código es {pin}",
+                                "{pin}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "gasto de amazon",
+                        "presupuesto de gastos en amazon",
+                        "mi presupuesto de gastos en amazon",
+                        "gastos en amazon",
+                        "cuanto gasté en amazon",
+                        "mis gastos en amazon",
+                        "cuanto gaste en amazon el ultimo mes"
+                    ]
+                },
+                {
+                    "name": "tarjetaCredito",
+                    "slots": [
+                        {
+                            "name": "pin",
+                            "type": "AMAZON.FOUR_DIGIT_NUMBER",
+                            "samples": [
+                                "el código es {pin}",
+                                "mi pin es {pin}",
+                                "{pin}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "cual es mi cupo de tarjeta de credito",
+                        "mi cupo de tarjeta de credito",
+                        "saldo disponible de tarjeta de credito",
+                        "cual es la deuda de mi tarjeta de crédito",
+                        "deuda tarjeta de crédito",
+                        "cuanto debo en mi tarjeta de crédito",
+                        "fecha de pago de mi tarjeta",
+                        "cuando es la fecha máxima de pago de tarjeta de crédito",
+                        "fecha de pago de tarjeta de crédito",
+                        "fecha de pago de mi tarjeta de crédito",
+                        "mi fecha de pago de la tarjeta de credito",
+                        "cual es mi fecha de pago de tarjeta de credito",
+                        "cuando debo pagar mi tarjeta credito"
+                    ]
+                },
+                {
+                    "name": "inicioSesion",
+                    "slots": [],
+                    "samples": [
+                        "pin",
+                        "mi pin",
+                        "por mi pin",
+                        "quiero mi pin",
+                        "solicitar pin",
+                        "iniciar sesion con pin"
+                    ]
+                },
+                {
+                    "name": "avanceTarjetaCredito",
+                    "slots": [
+                        {
+                            "name": "avance",
+                            "type": "AMAZON.NUMBER",
+                            "samples": [
+                                "necesito {avance} en mi cuenta",
+                                "pasa {avance} a mi cuenta de ahorros",
+                                "ayúdame con {avance}",
+                                "quiero {avance}",
+                                "avance por {avance}"
+                            ]
+                        },
+                        {
+                            "name": "pin",
+                            "type": "AMAZON.FOUR_DIGIT_NUMBER",
+                            "samples": [
+                                "{pin} ",
+                                "mi pin es {pin}",
+                                "el código es {pin}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "necesito un avance",
+                        "quiero un avance de crédito",
+                        "avance de crédito",
+                        "avance de mi tarjeta",
+                        "avance de mi tarjeta de crédito",
+                        "quiero un avance de mi tarjeta de crédito"
+                    ]
+                },
+                {
+                    "name": "pagoTarjetaCredito",
+                    "slots": [
+                        {
+                            "name": "abono",
+                            "type": "AMAZON.NUMBER",
+                            "samples": [
+                                "quiero abonar {abono}",
+                                "quiero abonar {abono} de mi cuenta de ahorros",
+                                "quiero pagar {abono}",
+                                "{abono}",
+                                "paga {abono}",
+                                "deseo pagar {abono}"
+                            ]
+                        },
+                        {
+                            "name": "pin",
+                            "type": "AMAZON.FOUR_DIGIT_NUMBER",
+                            "samples": [
+                                "{pin}",
+                                "el código es {pin}",
+                                "mi pin es {pin}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "pagar tarjeta de crédito",
+                        "pagar saldo de mi tarjeta de credito",
+                        "pagar la deuda de mi tarjeta",
+                        "pagar mi tarjeta",
+                        "pagar la tarjeta",
+                        "ayudame a pagar mi tarjeta de credito"
+                    ]
+                }
+            ],
+            "types": []
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "balanceCuentaAhorros",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "pin",
+                            "type": "AMAZON.FOUR_DIGIT_NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1392987496598.1327970630858"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "gastosAmazon",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "pin",
+                            "type": "AMAZON.FOUR_DIGIT_NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.536291145572.399248172551"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "tarjetaCredito",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "pin",
+                            "type": "AMAZON.FOUR_DIGIT_NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.370511418818.1352534942064"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "avanceTarjetaCredito",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "avance",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": true,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "confirmation": "Confirm.Slot.202136788813.1308967954952",
+                                "elicitation": "Elicit.Slot.48941750817.302824810625"
+                            }
+                        },
+                        {
+                            "name": "pin",
+                            "type": "AMAZON.FOUR_DIGIT_NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.464692739710.372212034515"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "pagoTarjetaCredito",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "abono",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": true,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "confirmation": "Confirm.Slot.1525738424082.704994397280",
+                                "elicitation": "Elicit.Slot.1525738424082.704994397280"
+                            }
+                        },
+                        {
+                            "name": "pin",
+                            "type": "AMAZON.FOUR_DIGIT_NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1525738424082.1177140311420"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "delegationStrategy": "ALWAYS"
+        },
+        "prompts": [
+            {
+                "id": "Slot.Validation.1548669530377.1048211598661.936352509193",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Su PIN no es correcto por favor intente de nuevo"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Repita su PIN nuevamente"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1548669530377.1048211598661",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Puedes completar tu contraseña?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1392987496598.587532708404",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Te he enviado un PIN a tu correo"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1392987496598.1327970630858",
+                "variations": [
+                    {
+                        "type": "SSML",
+                        "value": "<speak><say-as interpret-as=\"interjection\">Oye!</say-as>, recuerdame tu PIN.</speak>"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Por favor, recuerdame el último PIN que te enviamos."
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Para procesar tu solicitud, recuerdame el último PIN que te enviamos. "
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.536291145572.399248172551",
+                "variations": [
+                    {
+                        "type": "SSML",
+                        "value": "<speak><say-as interpret-as=\"interjection\">Oye!</say-as>, recuerdame tu PIN.</speak>"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Para responderte recuerdame el último PIN que te enviamos."
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Por favor, recuerdame el último PIN que te enviamos."
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.370511418818.1352534942064",
+                "variations": [
+                    {
+                        "type": "SSML",
+                        "value": "<speak><say-as interpret-as=\"interjection\">Oye!</say-as>, recuerdame tu PIN.</speak>"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Para responderte recuerdame el último PIN que te enviamos."
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Por favor, recuerdame el último PIN que te enviamos."
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.48941750817.302824810625",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "¿Por cuánto valor es tu avance?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "¿Cuentame cuánto necesitas?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.464692739710.372212034515",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Por favor, recuerdame el último PIN que te enviamos."
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Para responderte, recuerdame el último PIN que te enviamos."
+                    },
+                    {
+                        "type": "SSML",
+                        "value": "<speak><say-as interpret-as=\"interjection\">Oye!</say-as>, recuerdame tu PIN.</speak>"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1525738424082.1177140311420",
+                "variations": [
+                    {
+                        "type": "SSML",
+                        "value": "<speak><say-as interpret-as=\"interjection\">Oye!</say-as>, recuerdame tu PIN.</speak>"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Para responderte, recuerdame el último PIN que te enviamos."
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Por favor, recuerdame el último PIN que te enviamos."
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1525738424082.704994397280",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "¿Cuánto deseas pagar?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "¿Cuánto deseas debitar de tu cuenta de ahorros para pagar tu tarjeta?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "¿Cuánto deseas pagar de tu deuda?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Slot.1525738424082.704994397280",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "¿Deseas abonar COP {abono} descontando de tu cuenta de ahorros?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "¿Estás seguro de este pago?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "¿Podemos descontar COP {abono} de tu cuenta de ahorros?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Slot.202136788813.1308967954952",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "¿deseas un avance por COP {avance} ?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "¿Abonamos COP {avance} a tu cuenta de ahorros?"
+                    }
+                ]
+            }
+        ]
+    }
+}
